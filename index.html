@@ -6,16 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Practice</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h2>CatPhotoApp</h2>
+    <h2 class="red-text">CatPhotoApp</h2>
+    <style>
+        .red-text {
+            color:red;
+        }
+        p {
+            font-size: 16px;
+            font-family: monospace;
+        }
+        h2 {
+            font-family: Lobster, monospace;
+        } <!--font families use quotes for two words-->
+       
+        
+        .smaller-image {
+            width: 100px;
+            border-radius: 50%;
+        }
+        .thick-green-border {
+            border-width: 10px;
+            border-color: green;
+            border-style: solid;
+        }
+        .silver-background {
+            background-color: silver;
+        }
+        #cat-photo-form{
+    background-color:green;}
+
+    [type='checkbox']{
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    </style>
+   
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
 <!--the # in href allows for a dead link to test javascript functions.-->
 <!--This img withing a allows the image to be clickable-->
-  <p>Things cats love:</p>
+  <div class="silver-background">
+<p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
     <li>laser pointers</li>
@@ -27,8 +63,8 @@
     <li>thunder</li>
     <li>other cats</li>
   </ol>
- 
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  </div>
+  <form id="cat-photo-form" action="https://www.freecatphotoapp.com/submit-cat-photo">
     <label for="indoor"><input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label>
     <label for="outdoor"><input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
     <label for="loving"><input id="loving" value="loving" type="checkbox" name="personality" checked> Loving</label>
@@ -41,5 +77,6 @@
 <!--for the radio button, including the same name allows for only one button to be clicked.-->
 <!--Note the added word Checked to preselect the radio and checkboxes-->
 </main>
+
 </body>
 </html>
